@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pat Backley, whodunnits from Ōrewa</title>
+<meta name="description" content="A homepage idea made by Sparsh Saini for Pat Backley. Not her official site.">
+<meta property="og:title" content="Pat Backley: Death in the Rhododendrons">
+<meta property="og:description" content="A homepage idea made by Sparsh Saini for Pat Backley. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/patbackley/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400;62..125,600;62..125,900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/plate.jpg">
+<style>
+:root{--leaf:#1d261c;--leaf2:#2a3527;--cream:#f3ecdd;--red:#c8302b;--pink:#ead3d6;--ink:#f3ecdd;--soft:#c9c3b2}
+*{box-sizing:border-box;margin:0}
+html{background:var(--leaf)}
+body{background:var(--leaf);color:var(--ink);font:400 17px/1.6 "Archivo",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.strip{position:relative;z-index:5;background:var(--cream);color:var(--leaf);font-size:13px;line-height:1.35;padding:8px 16px;text-align:center}
+.wide{font-family:"Archivo";font-stretch:125%;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;line-height:1}
+.tall{font-family:"Anton",sans-serif;text-transform:uppercase;line-height:.92;letter-spacing:-.005em}
+/* hero */
+.hero{position:relative;height:360vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#121810}
+.frame{position:absolute;left:50%;top:50%;height:min(88svh,calc(92vw * 3576 / 2400));aspect-ratio:2400/3576;translate:-50% -50%;container-type:size;will-change:transform;transform-origin:30% 78%}
+.frame img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.t{position:absolute;left:0;right:0;text-align:center;color:var(--cream);white-space:nowrap;will-change:transform}
+.t1{top:23.4%;font-size:18.2cqw;line-height:.86}
+.t2{top:34.4%;font-size:6.7cqw;letter-spacing:-.03em}
+.t3{top:62.6%;font-size:3.7cqw;left:-3%;letter-spacing:-.04em}
+.t4{top:79.3%;font-size:7.6cqw;letter-spacing:-.04em}
+.bush{position:absolute;bottom:-6svh;height:118svh;width:auto;max-width:none;will-change:transform,opacity;pointer-events:none}
+.bush.l{left:50%;margin-left:-78svh}.bush.r{right:50%;margin-right:-78svh}
+.under{position:absolute;left:16px;right:16px;bottom:max(18px,3svh);display:flex;gap:10px;flex-wrap:wrap;justify-content:center;opacity:0;will-change:opacity}
+.btn{display:inline-block;padding:10px 16px 9px;background:var(--cream);color:var(--leaf);text-decoration:none;font-family:"Archivo";font-stretch:125%;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:-.01em}
+.btn.ghost{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 2px var(--cream)}
+.name{position:absolute;top:14px;left:16px;z-index:3;font-size:13px}
+@media (min-width:900px){
+  .frame{left:62%}
+  .side{position:absolute;left:6vw;top:50%;translate:0 -50%;width:min(30vw,420px);opacity:0;will-change:opacity,transform}
+  .under{display:none}
+}
+@media (max-width:899px){.side{display:none}}
+.side p{color:var(--soft);margin:18px 0 22px}
+.side .q{font-family:"Anton";font-size:clamp(28px,2.8vw,40px);line-height:1.05;color:var(--cream);text-transform:none}
+/* sections */
+section{padding:88px 16px;max-width:1080px;margin:0 auto}
+h2{font-family:"Anton";font-weight:400;font-size:clamp(40px,7vw,72px);line-height:.95;text-transform:uppercase;color:var(--cream)}
+h2 .wide{display:block;font-size:.34em;margin-top:.35em}
+.book{display:grid;gap:32px;align-items:start}
+.book img{width:100%;max-width:340px;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.book p{color:var(--soft);margin:16px 0}
+.said{margin:26px 0;padding:0;list-style:none;display:grid;gap:12px}
+.said li{font-family:"Anton";font-size:22px;line-height:1.15;color:var(--cream)}
+.said li::before{content:"\201C"}.said li::after{content:"\201D"}
+.meta{font-size:14px;color:var(--soft)}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.pinstripe{background:#26272b repeating-linear-gradient(90deg,transparent 0 46px,rgba(240,230,215,.16) 46px 47px)}
+.pinstripe .btn{background:var(--red);color:#fff}
+.shelf{border-top:2px solid var(--cream)}
+.shelf dl{display:grid;grid-template-columns:1fr;margin-top:24px}
+.shelf dt{font-family:"Archivo";font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:14px;margin-top:22px;color:var(--pink)}
+.shelf dd{margin:4px 0 0;font-size:18px}
+.about{display:grid;gap:32px}
+.about img{width:100%;max-width:380px;filter:none}
+.about p{color:var(--soft);margin:14px 0}
+.about .big{font-family:"Anton";font-size:clamp(30px,5vw,48px);line-height:1.02;color:var(--cream)}
+.events li{list-style:none;padding:18px 0;border-bottom:1px solid rgba(243,236,221,.25)}
+.events ul{padding:0;margin-top:20px}
+.events b{font-family:"Archivo";font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:15px;display:block}
+.signed{background:var(--red);max-width:none}
+.signed>div{max-width:1080px;margin:0 auto}
+.signed h2{color:#fff}
+.signed p{max-width:560px;margin:18px 0 26px;color:#fbe9e4}
+footer{padding:28px 16px 40px;text-align:center;font-size:13px;color:var(--soft)}
+@media (min-width:760px){.book{grid-template-columns:340px 1fr;gap:56px}.about{grid-template-columns:1fr 380px}.shelf dl{grid-template-columns:1fr 1fr;column-gap:40px}}
+@media (prefers-reduced-motion:reduce){.hero{height:auto}.stage{position:relative;height:100svh}.under,.side{opacity:1!important}.bush{display:none}}
+</style>
+</head>
+<body>
+<div class="strip">A homepage idea made by Sparsh Saini for Pat Backley. Not her official site.</div>
+
+<header class="hero" id="top">
+  <div class="stage">
+    <div class="name wide">Pat Backley</div>
+    <div class="side">
+      <div class="q">“The way she behaves you’d think it was The Oscars, not just the village garden show.”</div>
+      <p>A body by the rhododendrons on the day of the East Forke garden show, and a whole village with a reason. Pat’s new classic whodunnit, out August 2026.</p>
+      <a class="btn" href="https://www.amazon.com/dp/B0HF3SMMW8">Get the book</a>
+      <a class="btn ghost" href="#signed">Signed copy</a>
+    </div>
+    <div class="frame" id="frame">
+      <img src="img/plate.jpg" alt="" width="1400" height="2086">
+      <h1 class="t t1 tall" id="t1" aria-label="Death in the Rhododendrons">Death in the</h1>
+      <div class="t t2 wide" id="t2" aria-hidden="true">Rhododendrons</div>
+      <div class="t t3 wide" id="t3">A classic whodunnit</div>
+      <div class="t t4 wide" id="t4">Pat Backley</div>
+    </div>
+    <img class="bush l" id="bl" src="img/bush-l.png" alt="" width="900">
+    <img class="bush r" id="br" src="img/bush-r.png" alt="" width="900">
+    <div class="under" id="under"><a class="btn" href="https://www.amazon.com/dp/B0HF3SMMW8">Get the book</a><a class="btn ghost" href="#signed">Signed copy</a></div>
+  </div>
+</header>
+
+<main>
+<section class="book" id="book">
+  <img src="img/death-in-the-rhododendrons.jpg" alt="Death in the Rhododendrons cover: red and pink rhododendrons in flower" width="800" height="1192" loading="lazy">
+  <div>
+    <h2>Death in the Rhododendrons<span class="wide">A classic whodunnit</span></h2>
+    <p>On the day of the village garden show, someone is found dead beside the rhododendron bushes. East Forke is a sought after, traditional English country village, and under the hedges it runs on envy, lies and deceit. Plenty of people could have done it.</p>
+    <ul class="said">
+      <li>Oh I know she looks like butter wouldn’t melt in her mouth now, but if you ask me, there’s something suspicious there!</li>
+      <li>He sounds a right piece of work, but I can’t imagine he’d kill the old girl just to win first prize for his flowers.</li>
+    </ul>
+    <div class="meta">Out August 2026. ISBN 9781067144531.</div>
+    <div class="links"><a class="btn" href="https://www.amazon.com/dp/B0HF3SMMW8">Amazon</a><a class="btn ghost" href="https://www.barnesandnoble.com/w/death-in-the-rhododendrons-pat-backley/1151073913?ean=9781067144524">Barnes &amp; Noble</a></div>
+  </div>
+</section>
+
+<div class="pinstripe">
+<section class="book">
+  <img src="img/was-he-a-perfect-gentleman.jpg" alt="Was He A Perfect Gentleman? cover: a red bow tie on pinstripe" width="453" height="700" loading="lazy">
+  <div>
+    <h2>Was He A Perfect Gentleman?<span class="wide">Her first whodunnit</span></h2>
+    <p>1988, a small seaside town in South East England. One dead bank manager, and a long list of people who held grudges against him. Did any of them hate him enough?</p>
+    <div class="links"><a class="btn" href="https://www.amazon.com/dp/1991194463">Amazon</a><a class="btn ghost" href="https://www.barnesandnoble.com/w/was-he-a-perfect-gentleman-pat-backley/1147942932?ean=9781991194466">Barnes &amp; Noble</a></div>
+  </div>
+</section>
+</div>
+
+<section class="shelf" id="shelf">
+  <h2>The rest of the shelf</h2>
+  <dl>
+    <div><dt>Novels</dt><dd>Daisy (2020), her first, and The Second Daisy (2021)</dd></div>
+    <div><dt>The Ancestry series</dt><dd>Valentine George (2022), Lou and Eustace (2023), Dot &amp; Ben (2024)</dd></div>
+    <div><dt>Travel and memoir</dt><dd>From There To Here, With An Awful Lot In Between; Seventy Years Worth of Travel; Is Travel Still Fun In Your Seventies? (2026)</dd></div>
+    <div><dt>For anyone starting again</dt><dd>The Abandoned Wives Handbook: A Gentle Guide to One of Life’s Great Traumas (2023)</dd></div>
+  </dl>
+</section>
+
+<section class="about" id="about">
+  <div>
+    <h2>Pat Backley</h2>
+    <p class="big">She emigrated at 59, published Daisy just before turning 70, and intends to write till she dies.</p>
+    <p>English born, now in Ōrewa, north of Auckland. Historical fiction from her own family’s stories, travel memoirs, a handbook for abandoned wives, and now crime.</p>
+  </div>
+  <img src="img/pat-signing.jpg" alt="Pat Backley signing a book" width="600" height="931" loading="lazy">
+</section>
+
+<section class="events" id="events">
+  <h2>Where to find her</h2>
+  <ul>
+    <li><b>Ages of Pages book fair</b>One of the authors at the 2026 fair, Waikato</li>
+    <li><b>Mystery in the Library: Crime by the Coastline</b>Whangaparaoa Peninsula, 2026</li>
+    <li><b>Online</b><a href="https://www.instagram.com/patbackleyauthor/">Instagram</a> · <a href="https://www.facebook.com/patbackleyauthor">Facebook</a></li>
+  </ul>
+</section>
+
+<section class="signed" id="signed"><div>
+  <h2>A signed copy, with your name in it</h2>
+  <p>Any of Pat’s books can come personalised and signed. Email her and say which one, and who it is for.</p>
+  <a class="btn" style="background:var(--cream);color:var(--red)" href="mailto:hello@patbackley.com">hello@patbackley.com</a>
+</div></section>
+</main>
+<footer>A mockup made by Sparsh Saini for Pat Backley. Not affiliated, not live.</footer>
+
+<script>
+(()=>{
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ const hero=document.querySelector('.hero'),f=document.getElementById('frame'),
+  t=[1,2,3,4].map(i=>document.getElementById('t'+i)),bl=document.getElementById('bl'),br=document.getElementById('br'),
+  u=document.getElementById('under'),s=document.querySelector('.side');
+ const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),e=x=>1-Math.pow(1-x,3);
+ let top=0,len=1,tick=false;
+ const measure=()=>{top=hero.offsetTop;len=hero.offsetHeight-innerHeight};
+ const draw=()=>{tick=false;
+  const p=cl((scrollY-top)/len);
+  const a=e(cl(p/.72));            // camera pull back
+  const sc=2.7-1.7*a;
+  f.style.transform=`scale(${sc})`;
+  // title planes sit nearer than the bush photo: they lag then settle
+  t.forEach((el,i)=>{const d=(1-a)*(i<2?1:.6);el.style.transform=`translateY(${d*(i%2?-18:-28)}cqh) scale(${1+d*.25})`});
+  const b=e(cl(p/.55));            // pushing through the near bushes
+  bl.style.transform=`translate3d(${-70*b}vw,${8*b}vh,0) scale(${1.25+.5*b})`;
+  br.style.transform=`translate3d(${70*b}vw,${6*b}vh,0) scale(${1.25+.5*b})`;
+  bl.style.opacity=br.style.opacity=1-cl((p-.4)/.15);
+  const end=cl((p-.78)/.14);
+  u.style.opacity=end; if(s){s.style.opacity=end;s.style.transform=`translateY(${(1-end)*20}px)`}
+ };
+ const on=()=>{if(!tick){tick=true;requestAnimationFrame(draw)}};
+ measure();draw();addEventListener('scroll',on,{passive:true});addEventListener('resize',()=>{measure();on()});
+})();
+</script>
+</body>
+</html>
